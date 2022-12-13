@@ -43,7 +43,8 @@
                     $.each(data, function (key, item) {
                         addProcessorAsOption(item);
                     });
-                    $processor.val(data[0].Id);
+                    if (data && data.length > 0)
+                        $processor.val(data[0].Id);
                 });
         }
 
