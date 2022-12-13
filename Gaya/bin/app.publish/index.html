@@ -1,0 +1,92 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Processor</title>
+</head>
+<body>
+    <div id="process">
+        <h2>Start processing by insert values and select action, then press calculate button. Enjoy!</h2>
+        <input type="text" id="firstField" />
+        <select id="processor"></select>
+        <input type="text" id="secondField" />
+        <input type="button" onclick="calculate()" value="Calculate"/>
+        <h3>Rsults:</h3>
+        <p id="result" />
+    </div>
+    <div id="addProcess">
+        <h2>Add New Processor</h2>
+        <label>display value</label>
+        <input type="text" id="name" />
+        <br />
+        <label>action</label>
+        <input type="text" id="action" />
+        <br />
+        <label>description</label>
+        <input type="text" id="description" />
+        <br />
+        <input type="button" onclick="addProcessor()" value="Add Processor" />
+        <span id="status" />
+    </div>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.0.3.min.js"></script>
+    <script>
+        var uri = 'api/processor';
+
+        $(document).ready(function () {
+            displayAllProcessors();
+        });
+
+        function displayAllProcessors() {
+            $.getJSON(uri)
+                .done(function (data) {
+                    var $processor = $('#processor');
+                    $.each(data, function (key, item) {
+                        addProcessorAsOption(item);
+                    });
+                    $processor.val(data[0].Id);
+                });
+        }
+
+        function addProcessorAsOption(item) {
+            var $processor = $('#processor');
+            $('<option>', { text: item.Name, value: item.Id }).appendTo($processor);
+        }
+
+        function calculate() {
+            var firstField = $('#firstField').val(),
+                secondField = $('#secondField').val(),
+                processor = parseInt($('#processor').val()) || 0,
+                apiString = uri + '/' + processor + "?first=" + firstField + "&second=" + secondField;
+
+            $.getJSON(apiString)
+                .done(function (data) {
+                    $('#result').text(data);
+                })
+                .fail(function (jqXHR, textStatus, err) {
+                    var message = jqXHR.responseJSON && jqXHR.responseJSON.Message || jqXHR.responseText;
+                    $('#result').text('Error: ' + message);
+                });
+        }
+
+        function addProcessor() {
+            var name = $('#name').val(),
+                action = $('#action').val(),
+                description = $('#description').val(),
+                apiString = uri + "?name=" + name + "&action=" + action + "&description=" + description;
+
+            $('#status').text('');
+
+            $.post(apiString)
+                .done(function (data) {
+                    addProcessorAsOption({ Name: name, Id: data });
+                    $('#status').text('succed');
+                })
+                .fail(function (jqXHR, textStatus, err) {
+                    var message = jqXHR.responseJSON && jqXHR.responseJSON.Message || jqXHR.responseText;
+                    $('#status').text('Error: ' + message);
+                });
+
+        }
+    </script>
+</body>
+</html>
