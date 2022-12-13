@@ -56,7 +56,7 @@
             var firstField = $('#firstField').val(),
                 secondField = $('#secondField').val(),
                 processor = parseInt($('#processor').val()) || 0,
-                apiString = uri + '/' + processor + "?first=" + firstField + "&second=" + secondField;
+                apiString = `${uri}//${processor}?first=${firstField}&second=${secondField}`;
 
             $.getJSON(apiString)
                 .done(function (data) {
@@ -72,7 +72,9 @@
             var name = $('#name').val(),
                 action = $('#action').val(),
                 description = $('#description').val(),
-                apiString = uri + "?name=" + name + "&action=" + action + "&description=" + description;
+                apiString = `${uri}?name=${name}&action=${action}&description=${description}`;
+
+            apiString = apiString.replaceAll("+", "%2B");
 
             $('#status').text('');
 
