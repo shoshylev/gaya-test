@@ -45,13 +45,8 @@ namespace Gaya.Helper
             return processors.Count - 1;
         }
 
-        public static object ExecuteProcessor(int id, string first, string second)
+        public static object ExecuteProcessor(Processor processor, string first, string second)
         {
-            var processors = GetAllProcessors();
-            if (first == null || second == null)
-                return "failed, you must insert values";
-
-            var processor = GetSpecificProcessor(processors, id);
             if (processor == null)
                 return "failed, processor not found";
 
