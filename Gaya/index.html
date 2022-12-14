@@ -25,6 +25,12 @@
         <label>description</label>
         <input type="text" id="description" />
         <br />
+        <label>first parameter as string</label>
+        <input id="first" type="checkbox" />
+        <br />
+        <label>second parameter as string</label>
+        <input id="second" type="checkbox" />
+        <br />
         <input type="button" onclick="addProcessor()" value="Add Processor" />
         <span id="status" />
     </div>
@@ -73,7 +79,9 @@
             var name = $('#name').val(),
                 action = $('#action').val(),
                 description = $('#description').val(),
-                apiString = `${uri}?name=${name}&action=${action}&description=${description}`;
+                first = $('#first').is(":checked"),
+                second = $('#second').is(":checked"),
+                apiString = `${uri}?name=${name}&action=${action}&description=${description}&firstAsString=${first}&secondAsString=${second}`;
 
             apiString = apiString.replaceAll("+", "%2B");
 

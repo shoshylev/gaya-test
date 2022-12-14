@@ -1,1 +1,1 @@
-[{"Id":0,"Name":"+","Description":"sum","Action":"{0}+{1}"}]
+[{"Id":0,"Name":"+","Description":"sum","Action":"+","FirstParameterAsString":false,"SecondParameterAsString":false},{"Id":1,"Name":"*","Description":"multiple","Action":"*","FirstParameterAsString":false,"SecondParameterAsString":false},{"Id":2,"Name":"Contains","Description":"Contains","Action":"Contains","FirstParameterAsString":true,"SecondParameterAsString":true},{"Id":3,"Name":"Substring","Description":"Substring","Action":"Substring","FirstParameterAsString":true,"SecondParameterAsString":false}]

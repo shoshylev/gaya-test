@@ -24,13 +24,21 @@ namespace Gaya.Helper
 
         private static Processor GetSpecificProcessor(List<Processor> processors, int id) => processors.FirstOrDefault(p => p.Id == id);
 
-        public static int AddProcessor(string name, string action, string description)
+        public static int AddProcessor(string name, string action, string description, bool firstAsString, bool secondAsString)
         {
             if (string.IsNullOrEmpty(name) || string.IsNullOrEmpty(action))
                 return -1;
 
             var processors = GetAllProcessors();
-            processors.Add(new Processor() { Id = processors.Count, Name = name, Action = action, Description = description });
+            processors.Add(new Processor()
+            {
+                Id = processors.Count,
+                Name = name,
+                Action = action,
+                Description = description,
+                FirstParameterAsString = firstAsString,
+                SecondParameterAsString = secondAsString
+            });
 
             File.WriteAllText(path, JsonConvert.SerializeObject(processors));
 
@@ -50,7 +58,7 @@ namespace Gaya.Helper
             object res;
             try
             {
-                res = Eval(string.Format(processor.Action, first, second));
+                res = Compiler.CompileAndRun(processor, first, second);
             }
             catch (Exception e)
             {
@@ -58,12 +66,6 @@ namespace Gaya.Helper
             }
 
             return res;
-        }
-
-        private static object Eval(String expression)
-        {
-            System.Data.DataTable table = new System.Data.DataTable();
-            return table.Compute(expression, String.Empty);
         }
     }
 }

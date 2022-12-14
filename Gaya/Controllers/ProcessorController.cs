@@ -38,12 +38,12 @@ namespace Gaya.Controllers
         }
         
         // POST: api/processor
-        public IHttpActionResult Post(string name, string action, string description)
+        public IHttpActionResult Post(string name, string action, string description, bool firstAsString, bool secondAsString)
         {
             if (string.IsNullOrEmpty(name) || string.IsNullOrEmpty(action))
                 return BadRequest("you must insert name and action");
 
-            return Ok(ProcessorHelper.AddProcessor(name, action, description));
+            return Ok(ProcessorHelper.AddProcessor(name, action, description, firstAsString, secondAsString));
         }
     }
 

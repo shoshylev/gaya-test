@@ -90,6 +90,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Helper\Compiler.cs" />
     <Compile Include="Helper\ProcessorHelper.cs" />
     <Compile Include="Models\Processor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
