@@ -25,6 +25,12 @@
         <label>description</label>
         <input type="text" id="description" />
         <br />
+        <label>first parameter as string</label>
+        <input id="first" type="checkbox" />
+        <br />
+        <label>second parameter as string</label>
+        <input id="second" type="checkbox" />
+        <br />
         <input type="button" onclick="addProcessor()" value="Add Processor" />
         <span id="status" />
     </div>
@@ -43,7 +49,8 @@
                     $.each(data, function (key, item) {
                         addProcessorAsOption(item);
                     });
-                    $processor.val(data[0].Id);
+                    if (data && data.length > 0)
+                        $processor.val(data[0].Id);
                 });
         }
 
@@ -56,7 +63,7 @@
             var firstField = $('#firstField').val(),
                 secondField = $('#secondField').val(),
                 processor = parseInt($('#processor').val()) || 0,
-                apiString = uri + '/' + processor + "?first=" + firstField + "&second=" + secondField;
+                apiString = `${uri}//${processor}?first=${firstField}&second=${secondField}`;
 
             $.getJSON(apiString)
                 .done(function (data) {
@@ -72,7 +79,11 @@
             var name = $('#name').val(),
                 action = $('#action').val(),
                 description = $('#description').val(),
-                apiString = uri + "?name=" + name + "&action=" + action + "&description=" + description;
+                first = $('#first').is(":checked"),
+                second = $('#second').is(":checked"),
+                apiString = `${uri}?name=${name}&action=${action}&description=${description}&firstAsString=${first}&secondAsString=${second}`;
+
+            apiString = apiString.replaceAll("+", "%2B");
 
             $('#status').text('');
 
