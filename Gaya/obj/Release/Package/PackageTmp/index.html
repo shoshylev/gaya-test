@@ -36,7 +36,7 @@
     </div>
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.0.3.min.js"></script>
     <script>
-        var uri = 'api/processor';
+        var uri = 'api/Processors';
 
         $(document).ready(function () {
             displayAllProcessors();
@@ -89,7 +89,7 @@
 
             $.post(apiString)
                 .done(function (data) {
-                    addProcessorAsOption({ Name: name, Id: data });
+                    addProcessorAsOption({ Name: name, Id: data.Id });
                     $('#status').text('succed');
                 })
                 .fail(function (jqXHR, textStatus, err) {

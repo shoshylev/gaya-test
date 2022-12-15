@@ -65,3 +65,10 @@ C:\Users\shoshi.rosental\Documents\private\work\asp\learn asp\gaya\Gaya\Gaya\obj
 C:\Users\shoshi.rosental\Documents\private\work\asp\learn asp\gaya\Gaya\Gaya\obj\Release\Gaya.csproj.CopyComplete
 C:\Users\shoshi.rosental\Documents\private\work\asp\learn asp\gaya\Gaya\Gaya\obj\Release\Gaya.dll
 C:\Users\shoshi.rosental\Documents\private\work\asp\learn asp\gaya\Gaya\Gaya\obj\Release\Gaya.pdb
+C:\Users\shoshi.rosental\Documents\private\work\asp\learn asp\gaya\Gaya\Gaya\bin\EntityFramework.dll
+C:\Users\shoshi.rosental\Documents\private\work\asp\learn asp\gaya\Gaya\Gaya\bin\EntityFramework.SqlServer.dll
+C:\Users\shoshi.rosental\Documents\private\work\asp\learn asp\gaya\Gaya\Gaya\bin\EntityFramework.xml
+C:\Users\shoshi.rosental\Documents\private\work\asp\learn asp\gaya\Gaya\Gaya\bin\EntityFramework.SqlServer.xml
+C:\Users\shoshi.rosental\Documents\private\work\asp\learn asp\gaya\Gaya\Gaya\obj\Release\Gaya.Migrations.Initial.resources
+C:\Users\shoshi.rosental\Documents\private\work\asp\learn asp\gaya\Gaya\Gaya\obj\Release\Gaya.Migrations.Initial1.resources
+C:\Users\shoshi.rosental\Documents\private\work\asp\learn asp\gaya\Gaya\Gaya\obj\Release\Gaya.csproj.GenerateResource.cache

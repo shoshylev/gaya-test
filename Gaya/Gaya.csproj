@@ -109,6 +109,38 @@
     <Compile Include="Migrations\202212142036153_Initial1.designer.cs">
       <DependentUpon>202212142036153_Initial1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202212142318324_Initial2.cs" />
+    <Compile Include="Migrations\202212142318324_Initial2.designer.cs">
+      <DependentUpon>202212142318324_Initial2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202212142333061_Initial3.cs" />
+    <Compile Include="Migrations\202212142333061_Initial3.designer.cs">
+      <DependentUpon>202212142333061_Initial3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202212150000035_Initial4.cs" />
+    <Compile Include="Migrations\202212150000035_Initial4.designer.cs">
+      <DependentUpon>202212150000035_Initial4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202212150005339_Initial5.cs" />
+    <Compile Include="Migrations\202212150005339_Initial5.designer.cs">
+      <DependentUpon>202212150005339_Initial5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202212150009551_Initial6.cs" />
+    <Compile Include="Migrations\202212150009551_Initial6.designer.cs">
+      <DependentUpon>202212150009551_Initial6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202212150015389_Initial7.cs" />
+    <Compile Include="Migrations\202212150015389_Initial7.designer.cs">
+      <DependentUpon>202212150015389_Initial7.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202212150030411_Initial8.cs" />
+    <Compile Include="Migrations\202212150030411_Initial8.designer.cs">
+      <DependentUpon>202212150030411_Initial8.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202212150033159_Initial9.cs" />
+    <Compile Include="Migrations\202212150033159_Initial9.designer.cs">
+      <DependentUpon>202212150033159_Initial9.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\History.cs" />
     <Compile Include="Models\Processor.cs" />
@@ -132,6 +164,30 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202212142036153_Initial1.resx">
       <DependentUpon>202212142036153_Initial1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202212142318324_Initial2.resx">
+      <DependentUpon>202212142318324_Initial2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202212142333061_Initial3.resx">
+      <DependentUpon>202212142333061_Initial3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202212150000035_Initial4.resx">
+      <DependentUpon>202212150000035_Initial4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202212150005339_Initial5.resx">
+      <DependentUpon>202212150005339_Initial5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202212150009551_Initial6.resx">
+      <DependentUpon>202212150009551_Initial6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202212150015389_Initial7.resx">
+      <DependentUpon>202212150015389_Initial7.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202212150030411_Initial8.resx">
+      <DependentUpon>202212150030411_Initial8.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202212150033159_Initial9.resx">
+      <DependentUpon>202212150033159_Initial9.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

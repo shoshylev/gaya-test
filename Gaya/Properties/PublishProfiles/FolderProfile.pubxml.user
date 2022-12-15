@@ -5,14 +5,20 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 <Project>
   <PropertyGroup>
     <_PublishTargetUrl>C:\Users\shoshi.rosental\Documents\private\work\asp\learn asp\gaya\Gaya\Gaya\bin\app.publish\</_PublishTargetUrl>
-    <History>True|2022-12-14T00:07:00.6919581Z;True|2022-12-13T22:22:51.8030989+02:00;</History>
+    <History>True|2022-12-14T22:35:22.1237878Z;True|2022-12-14T02:07:00.6919581+02:00;True|2022-12-13T22:22:51.8030989+02:00;</History>
   </PropertyGroup>
   <ItemGroup>
+    <File Include="bin/EntityFramework.dll">
+      <publishTime>04/16/2020 23:38:42</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.SqlServer.dll">
+      <publishTime>04/16/2020 23:38:56</publishTime>
+    </File>
     <File Include="bin/Gaya.dll">
-      <publishTime>12/14/2022 02:07:00</publishTime>
+      <publishTime>12/15/2022 00:35:21</publishTime>
     </File>
     <File Include="bin/Gaya.pdb">
-      <publishTime>12/14/2022 02:07:00</publishTime>
+      <publishTime>12/15/2022 00:35:21</publishTime>
     </File>
     <File Include="bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll">
       <publishTime>09/05/2018 16:10:50</publishTime>
@@ -180,10 +186,10 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>12/11/2022 23:13:25</publishTime>
     </File>
     <File Include="index.html">
-      <publishTime>12/14/2022 01:58:53</publishTime>
+      <publishTime>12/15/2022 00:27:42</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>12/14/2022 02:07:00</publishTime>
+      <publishTime>12/15/2022 00:35:21</publishTime>
     </File>
   </ItemGroup>
 </Project>

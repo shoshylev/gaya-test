@@ -72,3 +72,11 @@ C:\Users\shoshi.rosental\Documents\private\work\asp\learn asp\gaya\Gaya\Gaya\bin
 C:\Users\shoshi.rosental\Documents\private\work\asp\learn asp\gaya\Gaya\Gaya\obj\Debug\Gaya.Migrations.Initial.resources
 C:\Users\shoshi.rosental\Documents\private\work\asp\learn asp\gaya\Gaya\Gaya\obj\Debug\Gaya.csproj.GenerateResource.cache
 C:\Users\shoshi.rosental\Documents\private\work\asp\learn asp\gaya\Gaya\Gaya\obj\Debug\Gaya.Migrations.Initial1.resources
+C:\Users\shoshi.rosental\Documents\private\work\asp\learn asp\gaya\Gaya\Gaya\obj\Debug\Gaya.Migrations.Initial2.resources
+C:\Users\shoshi.rosental\Documents\private\work\asp\learn asp\gaya\Gaya\Gaya\obj\Debug\Gaya.Migrations.Initial3.resources
+C:\Users\shoshi.rosental\Documents\private\work\asp\learn asp\gaya\Gaya\Gaya\obj\Debug\Gaya.Migrations.Initial4.resources
+C:\Users\shoshi.rosental\Documents\private\work\asp\learn asp\gaya\Gaya\Gaya\obj\Debug\Gaya.Migrations.Initial5.resources
+C:\Users\shoshi.rosental\Documents\private\work\asp\learn asp\gaya\Gaya\Gaya\obj\Debug\Gaya.Migrations.Initial6.resources
+C:\Users\shoshi.rosental\Documents\private\work\asp\learn asp\gaya\Gaya\Gaya\obj\Debug\Gaya.Migrations.Initial7.resources
+C:\Users\shoshi.rosental\Documents\private\work\asp\learn asp\gaya\Gaya\Gaya\obj\Debug\Gaya.Migrations.Initial8.resources
+C:\Users\shoshi.rosental\Documents\private\work\asp\learn asp\gaya\Gaya\Gaya\obj\Debug\Gaya.Migrations.Initial9.resources
