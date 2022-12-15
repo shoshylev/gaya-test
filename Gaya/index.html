@@ -37,6 +37,7 @@
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.0.3.min.js"></script>
     <script>
         var uri = 'api/Processors';
+        var uriHistory = 'api/Histories';
 
         $(document).ready(function () {
             displayAllProcessors();
@@ -68,6 +69,8 @@
             $.getJSON(apiString)
                 .done(function (data) {
                     $('#result').text(data);
+                    getHistory(processor);
+                    saveHistory(processor, firstField, secondField, data);
                 })
                 .fail(function (jqXHR, textStatus, err) {
                     var message = jqXHR.responseJSON && jqXHR.responseJSON.Message || jqXHR.responseText;
@@ -96,7 +99,41 @@
                     var message = jqXHR.responseJSON && jqXHR.responseJSON.Message || jqXHR.responseText;
                     $('#status').text('Error: ' + message);
                 });
+        }
 
+        function saveHistory(processor, firstField, secondField, data) {
+            var apiString = `${uriHistory}?firstField=${firstField}&secondField=${secondField}&processorId=${processor}&result=${data}`;
+            $.post(apiString);
+        }
+
+        function getHistory(processor) {
+            var apiString = `${uriHistory}?processorId=${processor}&count=3`,
+                $result = $('#result');
+
+            $.getJSON(apiString).done(function (data) {
+                if (!data)
+                    return;
+
+                printLasActions(data.Last3);
+                $result.append(`<br>count from start of month:${data.CurrentMonth}`);
+
+                if (data.Climax)
+                    $result.append(`<br>Min: ${data.Climax.Min} Max:${data.Climax.Max} Avg:${data.Climax.Avg}`);
+            });;
+        }
+
+        function printLasActions(actions) {
+            if (!actions)
+                return;
+
+            var $result = $('#result'), act;
+
+            $result.append("<br><h4>Last 3 Actions:</h4>");
+
+            for (var i = 0; i < actions.length; i++) {
+                act = actions[i];
+                $result.append(`<br>${act.FirstField} ${act.Processor.Name} ${act.SecondField} = ${act.Result}`);
+            }
         }
     </script>
 </body>
